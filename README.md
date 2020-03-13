@@ -2,7 +2,7 @@
 
 ## Courses to study
 
-[ECEN 214 – Electrical Circuit Theory](./ECEN_214/index.md)
+[CSCE 221 – Data Structures and Algorithms](./CSCE_221/index.md)
 
 [ECEN 248 – Introduction to Digital Systems Design](./ECEN_248/index.md)
 
@@ -10,7 +10,7 @@
 
 ## Second Options
 
-[CSCE 221 – Data Structures and Algorithms](./CSCE_221/index.md)
+[ECEN 214 – Electrical Circuit Theory](./ECEN_214/index.md)
 
 [ECEN 303 – Probability and Random Variables](./ECEN_303/index.md)
 
