@@ -1,5 +1,16 @@
 # Computer Organization and Design - ECEN 350
 
+## Book:
+
+Patterson, David A., and John L. Hennessy. Computer Organization and Design ARM Edition: The Hardware Software Interface. Morgan kaufmann, 2016.
+
+## Exercises:
+
+[Chapter 1](./exercises.md)
+
+
+## Contents:
+
 1. Instruction Set Architectures
 
 - [ ] Representing Instruction Set Architectures
