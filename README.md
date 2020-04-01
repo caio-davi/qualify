@@ -18,7 +18,7 @@
 
 | Week | Date |CSCE221 | ECEN 248 | ECEN 350|
 |------|------|--------|----------|---------|
-|01    |03/15 | :black_square_button: cap 1 & 2 | :black_square_button: cap 1 & apen A| :ballot_box_with_check: cap 1 | 
+|01    |03/15 | :black_square_button: cap 1 & 2 | :ballot_box_with_check: cap 1 & apen A| :ballot_box_with_check: cap 1 | 
 |02    |03/22 | :black_square_button: cap 3| :black_square_button: cap 2 | :black_square_button: cap 1 & 6.2 | 
 |03    |03/29 | :black_square_button: cap 4 & 12.2| :black_square_button: cap 3 | :black_square_button: cap 2 | 
 |04    |04/05 | :black_square_button: cap 5 | :black_square_button: cap 4 | :black_square_button: cap 2 | 

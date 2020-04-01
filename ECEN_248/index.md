@@ -1,5 +1,13 @@
 # Digital System Design – ECEN 248
 
+## Book:
+
+Frank Vahid. Computer Digital Design with RTL Design, VHDL, and Verilog.
+
+## Exercises:
+
+[Chapter 1](./exercises.md)
+
 1. Logic gates and Boolean Algebra
 
 - [ ] Theorems of Boolean Algebra
