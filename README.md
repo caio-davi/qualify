@@ -1,6 +1,6 @@
 # Qualifying Exam
 
-> ## Date: August, 13
+> ## NEW Date: August, 13
 
 ## Courses to study
 
@@ -26,19 +26,19 @@
 |04    |04/05 | off| off| off | 
 |05    |04/12 | off| off| off | 
 |05    |04/19 | off| off| off | 
-|05    |04/26 | :black_square_button: cap 1 & 2 | :black_square_button: cap 1 & apen A | :black_square_button:  cap 1 & 6.2 | 
-|06    |05/03 | :black_square_button: cap 3 | :black_square_button: cap 2 | :black_square_button: cap 2 | 
-|06    |05/10 | :black_square_button: cap 4 & 12.2 | :black_square_button: cap 2 | :black_square_button: cap 2 | 
-|06    |05/17 | :black_square_button: cap 4 & 12.2 | :black_square_button: cap 3 | :black_square_button: cap 2 | 
-|06    |05/24 | :black_square_button: cap 5 | :black_square_button: cap 3 | :black_square_button: cap 3 | 
-|06    |05/31 | :black_square_button: cap 5 | :black_square_button: cap 4 | :black_square_button: cap 3 | 
-|06    |06/07 | :black_square_button: cap 6 | :black_square_button: cap 4 | :black_square_button: cap 3 | 
-|06    |06/14 | :black_square_button: cap 6 | :black_square_button: cap 5 | :black_square_button: cap 4 | 
-|06    |06/21 | :black_square_button: cap 7 | :black_square_button: cap 5 | :black_square_button: cap 4 | 
-|06    |06/28 | :black_square_button: cap 7 | :black_square_button: cap 6 | :black_square_button: cap 4 | 
-|06    |07/05 | :black_square_button: cap 8 | :black_square_button: cap 6 | :black_square_button: cap 5 | 
-|07    |07/12 | :black_square_button: cap 8 | :black_square_button: cap 7 | :black_square_button: cap 5 | 
-|08    |07/19 | :black_square_button: cap 9 | :black_square_button: cap 7 | :black_square_button: cap 5 | 
-|09    |07/269 | :black_square_button: cap 9 | :black_square_button: rev  | :black_square_button: rev | 
-|10    |08/02 | :black_square_button: rev 10 | :black_square_button: rev  | :black_square_button: rev | 
-|11    |08/09 | :black_square_button: rev 10 | :black_square_button: rev  | :black_square_button: rev | 
+|05    |04/26 | off| off| off | 
+|05    |05/03 | off| off| off | 
+|05    |05/10 | off| off| off | 
+|05    |05/17 | :black_square_button: cap 1 & 2 | :black_square_button: cap 1 & apen A | :black_square_button:  cap 1 & 6.2 | 
+|06    |05/24 | :black_square_button: cap 3 | :black_square_button: cap 2 | :black_square_button: cap 2 | 
+|06    |05/31 | :black_square_button: cap 4 & 12.2 | :black_square_button: cap 2 | :black_square_button: cap 2 | 
+|06    |06/07 | :black_square_button: cap 4 & 12.2 | :black_square_button: cap 3 | :black_square_button: cap 2 | 
+|06    |06/14 | :black_square_button: cap 5 | :black_square_button: cap 3 | :black_square_button: cap 3 | 
+|06    |06/21 | :black_square_button: cap 6 | :black_square_button: cap 4 | :black_square_button: cap 3 | 
+|06    |06/28 | :black_square_button: cap 6 | :black_square_button: cap 5 | :black_square_button: cap 4 | 
+|06    |07/05 | :black_square_button: cap 7 | :black_square_button: cap 6 | :black_square_button: cap 4 | 
+|06    |07/12 | :black_square_button: cap 7 | :black_square_button: cap 7 | :black_square_button: cap 5 | 
+|06    |07/19 | :black_square_button: cap 8 | :black_square_button: rev | :black_square_button: cap 5 | 
+|06    |07/26 | :black_square_button: cap 9 | :black_square_button: rev | :black_square_button: rev | 
+|07    |08/02 | :black_square_button: cap 10 | :black_square_button: rev | :black_square_button: rev | 
+|08    |08/09 | :black_square_button: rev | :black_square_button: rev | :black_square_button: rev | 
