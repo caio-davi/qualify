@@ -10,18 +10,19 @@ Frank Vahid. Computer Digital Design with RTL Design, VHDL, and Verilog.
 
 1. Logic gates and Boolean Algebra
 
-- [ ] Theorems of Boolean Algebra
-- [ ] Variables, literals, minterms, maxterms, cubes
-- [ ] Two-level logic minimization
-- [ ] Incompletely specified logic functions
-- [ ] Canonical representations of logic functions
+- [x] Theorems of Boolean Algebra
+- [x] Variables, literals, minterms, maxterms, cubes
+- [x] Two-level logic minimization
+- [x] Incompletely specified logic functions
+- [x] Canonical representations of logic functions
 
 2. Combinational Logic
 
-- [ ] Shannon's Expansion Theorem
-- [ ] Multi-level logic optimization
-- [ ] Timing analysis
-- [ ] Special circuits – MUXes, Decoders, Encoders, PLAs, FPGAs, CPLDs,
+- [x] Shannon's Expansion Theorem
+- [x] Multi-level logic optimization
+- [x] Timing analysis
+- [x] Special circuits – MUXes, Decoders, Encoders, 
+- [ ] PLAs, FPGAs, CPLDs,
 
 3. Arithmetic Circuits
 

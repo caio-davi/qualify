@@ -13,11 +13,11 @@ Patterson, David A., and John L. Hennessy. Computer Organization and Design ARM 
 
 1. Instruction Set Architectures
 
-- [ ] Representing Instruction Set Architectures
-- [ ] Arithmetical and Logical Instructions
-- [ ] Memory access instructions
-- [ ] Control flow instructions
-- [ ] Function call instructions
+- [x] Representing Instruction Set Architectures
+- [x] Arithmetical and Logical Instructions
+- [x] Memory access instructions
+- [x] Control flow instructions
+- [x] Function call instructions
 
 2. Computer Arithmetic
 

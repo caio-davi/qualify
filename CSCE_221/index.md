@@ -2,18 +2,24 @@
 
 1. Data Structures
 
-- [ ] Stacks
-- [ ] Queues
-- [ ] Linked lists
-- [ ] The tree abstract data type and data structures for representing trees
-- [ ] Properties of binary trees
-- [ ] Binary search trees
-- [ ] AVL trees
-- [ ] Red‐black trees
-- [ ] The priority queue abstract data type
-- [ ] The heap data structure
-- [ ] Hash tables
-- [ ] Data structure of graphs
+- 1.1 Stacks
+  - [ ] Stacks
+- 1.2 Queues
+  - [ ] Queues
+  - [ ] The priority queue abstract data type
+- 1.3 Lists
+  - [ ] Linked lists
+- 1.4 Trees
+  - [ ] The tree abstract data type and data structures for representing trees
+  - [ ] Properties of binary trees
+  - [ ] Binary search trees
+  - [ ] AVL trees
+  - [ ] Red‐black trees
+- 1.5 Hash Tables
+  - [ ] The heap data structure
+  - [ ] Hash tables
+- 1.6 Graphs
+  - [ ] Data structure of graphs
   - [ ] The edge list
   - [ ] The adjacency list
   - [ ] The adjacency matrix
