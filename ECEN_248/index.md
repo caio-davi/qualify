@@ -3,10 +3,9 @@
 ## Book:
 
 Frank Vahid. Computer Digital Design with RTL Design, VHDL, and Verilog.
+[Exercises](./exercises.md)
 
-## Exercises:
-
-[Chapter 1](./exercises.md)
+### Exam's Contents:
 
 1. Logic gates and Boolean Algebra
 
