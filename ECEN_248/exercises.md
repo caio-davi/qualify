@@ -222,3 +222,16 @@ Equivalent
 
 ### 2.52
 Not equivalent (they are the opposite of each other)
+
+## Chapter 3
+
+### 3.1
+(a) 2 * 10^-5
+
+### 3.2
+(a) 3.0518 * 10^-5
+(b) 10^-8
+
+### 3.3
+(a) 1Hz
+(b) 1KHz

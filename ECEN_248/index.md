@@ -25,17 +25,17 @@ Frank Vahid. Computer Digital Design with RTL Design, VHDL, and Verilog.
 
 3. Arithmetic Circuits
 
-- [ ] Addition
-- [ ] Subtraction and 2's complement
-- [ ] Multiplication
+- [x] Addition
+- [x] Subtraction and 2's complement
+- [x] Multiplication
 - [ ] Division
 - [ ] Arithmetic Sums-of-products
 - [ ] Floating point arithmetic
 
 4. Sequential Design
 
-- [ ] Latches, Flip-flops, Registers
-- [ ] Counters
+- [x] Latches, Flip-flops, Registers
+- [x] Counters
 - [ ] State machines
 - [ ] Incomplete specification and non-determinism
 
