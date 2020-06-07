@@ -21,17 +21,17 @@ Patterson, David A., and John L. Hennessy. Computer Organization and Design ARM 
 
 2. Computer Arithmetic
 
-- [ ] Signed and unsigned numbers
-- [ ] Addition and subtraction
-- [ ] Multiplication and Division
-- [ ] Floating point operations
+- [x] Signed and unsigned numbers
+- [x] Addition and subtraction
+- [x] Multiplication and Division
+- [x] Floating point operations
 
 3. Translating and starting a program
 
-- [ ] Compilers, compiler optimization
-- [ ] Object code generation
-- [ ] Assemblers
-- [ ] Linking
+- [x] Compilers, compiler optimization
+- [x] Object code generation
+- [x] Assemblers
+- [x] Linking
 - [ ] Run-time execution environment
 
 4. Performance evaluation

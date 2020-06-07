@@ -4,17 +4,17 @@
 
 ## Courses to study
 
-[CSCE 221 – Data Structures and Algorithms](./CSCE_221/index.md)
+[CSCE 221 – Data Structures and Algorithms](./CSCE_221/README.md)
 
-[ECEN 248 – Introduction to Digital Systems Design](./ECEN_248/index.md)
+[ECEN 248 – Introduction to Digital Systems Design](./ECEN_248/README.md)
 
-[ECEN 350 – Computer Architecture and Design](./ECEN_350/index.md)
+[ECEN 350 – Computer Architecture and Design](./ECEN_350/README.md)
 
 ## Second Options
 
-[ECEN 214 – Electrical Circuit Theory](./ECEN_214/index.md)
+[ECEN 214 – Electrical Circuit Theory](./ECEN_214/README.md)
 
-[ECEN 303 – Probability and Random Variables](./ECEN_303/index.md)
+[ECEN 303 – Probability and Random Variables](./ECEN_303/README.md)
 
 ## Schedule
 
