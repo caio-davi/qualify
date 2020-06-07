@@ -1,5 +1,6 @@
 #include <iostream>
 #include <stdlib.h>
+#include <stdio.h> 
 
 using namespace std;
 
@@ -31,7 +32,7 @@ void bubble_sort(int v[], int size){
 
 int * create_array(int v[], int size){
     for(int i = 0; i< size; i++){
-        v[i] = rand() % 100;
+        v[i] = rand() % 10000;
     }
     return v;
 }
@@ -42,14 +43,23 @@ int select_k(int v[], int k){
 
 int main (){
 
-    int size = 20;
+    int size;
+    cout << "Size of randomly generated array:";
+    cin >> size;
     int a [size];
     int *v = create_array(a, size);
-
     print(v, size);
-    bubble_sort(v, size);
-    print(v, size);
-    cout << "The Kth number is " << select_k(v, 8);
+    
+    int k ;
+    cout << "The k(th) element on the array:";
+    cin >> k;
+    if(k < size){
+        bubble_sort(v, size);
+        print(v, size);
+        cout << "The "<< k << "th number is " << select_k(v, k)<< "\n";
+    }else{
+        cout << "K is bigger than the Length of array.";
+    }
 
     return 0;
 }
