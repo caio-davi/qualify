@@ -36,7 +36,6 @@ public:
     }
 
     void printArray(){
-        cout << "HEap Size" << heap_size << "\n";
         for(int i = 0; i< heap_size; i++){
             cout << harr[i] << " | ";
         }
@@ -116,21 +115,36 @@ public:
 
 
 int main(){ 
-    MinHeap h(11); 
+    MinHeap h(20); 
     h.insertKey(3); 
+    h.insertKey(7); 
+    h.insertKey(35); 
     h.insertKey(2); 
-    // h.deleteKey(1); 
+    h.printArray();
+    cout << "Delete key (1) \n";
+    h.deleteKey(1);
+    h.printArray();
+    cout << " \n";
+
     h.insertKey(15); 
     h.insertKey(5); 
+    h.insertKey(52); 
+    h.insertKey(25); 
     h.insertKey(4); 
     h.insertKey(45); 
     h.printArray();
+    cout << "Extract min \n";
     cout << h.extractMin() << " \n"; 
     h.printArray();
+    cout << "--------------------------\n";
+    cout << "Get min \n";
     cout << h.getMin() << " \n"; 
     h.printArray();
+    cout << "--------------------------\n";
+    cout << "Decrease key \n";
     h.decreaseKey(2, 1); 
     h.printArray();
+    cout << "--------------------------\n";
     cout << h.getMin() << "\n"; 
     h.printArray(); 
     return 0; 
