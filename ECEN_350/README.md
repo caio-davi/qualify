@@ -36,11 +36,11 @@ Patterson, David A., and John L. Hennessy. Computer Organization and Design ARM 
 
 4. Performance evaluation
 
-- [ ] CPU performance and its factors
-- [ ] Performance metrics
-- [ ] Performance factors
-- [ ] Comparing performance
-- [ ] SPEC benchmarks
+- [x] CPU performance and its factors
+- [x] Performance metrics
+- [x] Performance factors
+- [x] Comparing performance
+- [x] SPEC benchmarks
 
 5. Datapath and Control
 

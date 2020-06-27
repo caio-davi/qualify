@@ -56,3 +56,61 @@ b.
 | P1 | (3 x 10^9) x 10 = 3 x 10^10 | (2 x 10^9) x 10 = 2 x 10^10 |
 | P2 | (2.5 x 10^9) x 10 = 2.5 x 10^10 | (2.5 x 10^9) x 10 = 2.5 x 10^10 |
 | P3 | (4 x 10^9) x 10 = 4 x 10^10 | (1.82 x 10^9) x 10 = 1.82 x 10^10 |
+
+c.
+
+CPI(P1) = 1.8, CPI(P2) = 1.2, CPI(P3) = 2.6
+Clock Rate = (No. instr. x  CPI)/time, then
+P1 = (2 x 10^10 x 1.8/7) = 5.14 GHz
+P2 = (2.5 x 10^10 x  1.2/7) = 4.28 GHz
+P1 = (1.82 x 10^10 x 2.6/7) = 6.75 GHz
+
+### 1.11:
+
+1.11.1 -> 0.9418
+
+1.11.2 -> 12.86
+
+1.11.3 -> 10%
+
+1.11.4 -> 1.1 x 1.05 = 1.155 = 15.5%
+
+1.11.5 -> new SPECratio = 0.86 = 14% decrease.
+
+1.11.6 -> 1.3879
+
+1.11.7 -> The CPI increased in 47.36%, while the clock rate increased in 33.33%. The instruction set had changed and the execution time as well, all those variables affects the CPI.
+
+1.11.8 -> 50s, or 6.66% decrease.
+
+1.11.9 -> 2146.58 x 10^9
+
+1.11.10 -> 3.6 Ghz
+
+1.11.11
+
+
+
+## Chapter 2
+
+### 2.1 
+
+SUBI    X0, X2, 5
+ADD     X0, X0, X1
+
+### 2.2
+
+f = i + g + h
+
+### 2.3
+
+SUBI    X0, X3, X4
+LSL     X1, X0, 2
+ADD     X6, X1, X6
+LDUR    X2, [X6, 0]
+STUR    X2, [X7 32]
+
+### 2.4
+
+// X9 + 8
+// 
