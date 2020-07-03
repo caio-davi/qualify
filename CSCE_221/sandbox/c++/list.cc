@@ -14,19 +14,42 @@ public:
         data = value;
         next = n;
     }
+
+    bool hasNext(){
+        if(next->data == NULL){
+            return false;
+        }else{
+            return true;
+        }
+    }
 }; 
 
-void push(Node* n, data){
-    
-}
+class List {
+    Node* root;
+    public:
+
+    List(int value){ 
+        Node a = (value);
+        root = &a; 
+    }
+
+};
+
 
 int main(){ 
 
-    List head = new List(10);
+    // List head = (10);
 
-    // head.insert(5);
+    Node test = (10);
+    Node test1 = (11);
+    Node test2 = (12);
 
-    head.print();
+    test.next = &test1;
+
+    cout << test.hasNext();
+    cout << test1.hasNext();
+
+
     return 0; 
 
 } 
