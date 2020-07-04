@@ -4,7 +4,7 @@ Mark Allen Weiss
 
 ## Chapter 3
 
-### 3.1 
+### 3.1
 
 ```c++
 #include <list>
@@ -40,29 +40,29 @@ int main(){
 }
 ```
 
-Ouputs: 
+Ouputs:
+
 ```
 // Using Vector:
-200, 400, 500, 700, 
+200, 400, 500, 700,
 Running time: 0.049
 // Using List:
-200, 400, 500, 700, 
+200, 400, 500, 700,
 Running time: 0.062
 ```
 
 If it uses a vector implementations it will be O(n), if it is a linked list, O(n^2).
 
-
 ### 3.11
 
 ```c++
-#include <bits/stdc++.h> 
-using namespace std; 
-  
-struct Node { 
-    int data; 
+#include <bits/stdc++.h>
+using namespace std;
+
+struct Node {
+    int data;
     Node* next;
-}; 
+};
 
 class List {
     private:
@@ -140,7 +140,7 @@ void List::remove(int value){
     }
 }
 
-int main(){ 
+int main(){
 
     List head = List();
 
@@ -161,27 +161,28 @@ int main(){
     cout << "Has 3: " << head.has(3) << "\n";
     cout << "Size: " << head.listSize() << "\n";
 
-    return 0; 
+    return 0;
 
-} 
+}
 ```
 
 Output:
+
 ```
 Element 3 already in the list
-2 3 4 
+2 3 4
 Size: 3
 Has 3: 1
 Has 5: 0
 
-Remove 3 
+Remove 3
 
-2 4 
+2 4
 Has 3: 0
 Size: 2
 ```
 
-### 3.12 
+### 3.12
 
 Just change the `insert()` prototype:
 
@@ -197,7 +198,7 @@ void List::insert(int value){
                 Node* newNode = new Node;
                 newNode->data = value;
                 newNode->next = next;
-                lastNode->next = newNode; 
+                lastNode->next = newNode;
                 size++;
                 break;
             }else{
@@ -207,3 +208,49 @@ void List::insert(int value){
     }
 }
 ```
+
+## Chapter 4
+
+### 4.1
+
+a. Node `A`.
+b. Nodes `G`, `H`, `I`, `L`, `M`, `K`.
+
+### 4.2
+
+| Node | Parent | Children | Siblings | Depth | Height |
+| ---- | ------ | -------- | -------- | ----- | ------ |
+| `A`  | -      | `B`, `C` | -        | 0     | 4      |
+| `B`  | `A`    | `D`, `E` | `C`      | 1     | 3      |
+| `C`  | `A`    | `F`      | `B`      | 1     | 2      |
+| `D`  | `B`    | `G`,`H`  | `E`      | 2     | 1      |
+| `E`  | `B`    | `I`,`J`  | 2        | 2     | 2      |
+| `F`  | `C`    | `K`      | -        | 2     | 1      |
+| `G`  | `D`    | -        | `H`      | 3     | 0      |
+| `H`  | `D`    | -        | `G`      | 3     | 0      |
+| `I`  | `E`    | -        | `J`      | 3     | 0      |
+| `J`  | `E`    | `L`, `M` | `I`      | 3     | 0      |
+| `K`  | `F`    | -        | -        | 3     | 0      |
+| `L`  | `J`    | -        | `M`      | 4     | 0      |
+| `M`  | `J`    | -        | `L`      | 4     | 0      |
+
+### 4.3 
+4
+
+### 4.4
+There are N nodes, each of them have 2 pointers for their children totalizing 2N pointers. Except for the root, each node will also have one incoming pointer, totalizing N-1 poiters used. Therefore, there will be N+1 `nullptr`.
+
+### 4.8
+
+Prefix :  - * * a b + c d e
+Infix:   (a * b * (c  + d))  - e
+Postfix: a b * c d + * e -
+
+### 4.9 
+a.Insertion:
+
+![](./images/ex49a.png)
+
+a.After remove the root:
+
+![](./images/ex49b.png)

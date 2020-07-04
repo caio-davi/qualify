@@ -30,8 +30,8 @@
 |05    |05/03 | off| off| off | 
 |05    |05/10 | off| off| off | 
 |05    |05/17 | off | :ballot_box_with_check: cap 2| :ballot_box_with_check:   cap 1| 
-|06    |05/24 | off | :ballot_box_with_check:  cap 3 | :ballot_box_with_check:  cap 2 | 
-|06    |05/31 | :black_square_button: cap 3 | :ballot_box_with_check:cap 2 | :ballot_box_with_check:cap 2 | 
+|06    |05/24 | off | :ballot_box_with_check:   cap 3 | :ballot_box_with_check:  cap 2 | 
+|06    |05/31 | :ballot_box_with_check: cap 3 | :ballot_box_with_check:cap 2 | :ballot_box_with_check:cap 2 | 
 |06    |06/07 | :black_square_button: cap 4 & 12.2 | :ballot_box_with_check: cap 3 | :ballot_box_with_check: cap 2 | 
 |06    |06/14 | :black_square_button: cap 5 | :ballot_box_with_check:cap 3 | :ballot_box_with_check: cap 3 | 
 |06    |06/21 | :black_square_button: cap 6 | :ballot_box_with_check: cap 4 | :ballot_box_with_check:cap 3 | 

@@ -3,9 +3,9 @@
 1. Data Structures
 
 - 1.1 Stacks
-  - [ ] Stacks
+  - [x] Stacks
 - 1.2 Queues
-  - [ ] Queues
+  - [x] Queues
   - [ ] The priority queue abstract data type
 - 1.3 Lists
   - [x] Linked lists
