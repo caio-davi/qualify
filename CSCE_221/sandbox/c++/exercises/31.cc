@@ -17,8 +17,6 @@ void printLots(const list_of_int& L, const list_of_int& P){
     }
 }
 
-
-
 int main(){
     int start_s = clock();
     list_of_int L = {100, 200, 300, 400, 500, 600, 700, 800, 900, 1000};

@@ -27,6 +27,7 @@ List::List(){
     root = new Node;
     root->data = 0;
     root->next = new Node;
+    root->next->data = 9999;
     size = 0;
 }
 
@@ -54,14 +55,22 @@ bool List::has(int value){
 void List::insert(int value){
     Node* lastNode = root;
     for(int i=0; i<=size; i++){
-        lastNode = lastNode->next;
-    }
-    if(has(value) == true){
-        cout << "Element " << value << " already in the list" << "\n";
-    }else{
-    lastNode->data = value;
-    lastNode->next = new Node;
-    size++;
+        // Node* temp = lastNode;
+        if(lastNode->data == value){
+            cout << "Element " << value << " already in the list" << "\n";
+        }else{
+            Node* next = lastNode->next;
+            if (next->data > value){
+                Node* newNode = new Node;
+                newNode->data = value;
+                newNode->next = next;
+                lastNode->next = newNode; 
+                size++;
+                break;
+            }else{
+                lastNode = lastNode->next;
+            }
+        }
     }
 }
 
@@ -86,10 +95,12 @@ int main(){
 
     List head = List();
 
-    head.insert(2);
-    head.insert(3);
-    head.insert(3);
+    head.insert(5);
     head.insert(4);
+    head.insert(2);
+    head.insert(-9);
+    head.insert(22);
+    head.insert(3);
     head.printAll();
 
     cout << "Size: " << head.listSize() << "\n";

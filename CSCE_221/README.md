@@ -8,7 +8,7 @@
   - [ ] Queues
   - [ ] The priority queue abstract data type
 - 1.3 Lists
-  - [ ] Linked lists
+  - [x] Linked lists
 - 1.4 Trees
   - [ ] The tree abstract data type and data structures for representing trees
   - [ ] Properties of binary trees
