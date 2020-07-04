@@ -31,12 +31,12 @@
 |05    |05/10 | off| off| off | 
 |05    |05/17 | off | :ballot_box_with_check: cap 2| :ballot_box_with_check:   cap 1| 
 |06    |05/24 | off | :ballot_box_with_check:  cap 3 | :ballot_box_with_check:  cap 2 | 
-|06    |05/31 | :black_square_button: cap 3 | :black_square_button: cap 2 | :black_square_button: cap 2 | 
-|06    |06/07 | :black_square_button: cap 4 & 12.2 | :black_square_button: cap 3 | :black_square_button: cap 2 | 
-|06    |06/14 | :black_square_button: cap 5 | :black_square_button: cap 3 | :black_square_button: cap 3 | 
-|06    |06/21 | :black_square_button: cap 6 | :black_square_button: cap 4 | :black_square_button: cap 3 | 
-|06    |06/28 | :black_square_button: cap 6 | :black_square_button: cap 5 | :black_square_button: cap 4 | 
-|06    |07/05 | :black_square_button: cap 7 | :black_square_button: cap 6 | :black_square_button: cap 4 | 
+|06    |05/31 | :black_square_button: cap 3 | :ballot_box_with_check:cap 2 | :ballot_box_with_check:cap 2 | 
+|06    |06/07 | :black_square_button: cap 4 & 12.2 | :ballot_box_with_check: cap 3 | :ballot_box_with_check: cap 2 | 
+|06    |06/14 | :black_square_button: cap 5 | :ballot_box_with_check:cap 3 | :ballot_box_with_check: cap 3 | 
+|06    |06/21 | :black_square_button: cap 6 | :ballot_box_with_check: cap 4 | :ballot_box_with_check:cap 3 | 
+|06    |06/28 | :black_square_button: cap 6 | :black_square_button: cap 5 | :ballot_box_with_check: cap 4 | 
+|06    |07/05 | :black_square_button: cap 7 | :black_square_button: cap 6 | :ballot_box_with_check: cap 4 | 
 |06    |07/12 | :black_square_button: cap 7 | :black_square_button: cap 7 | :black_square_button: cap 5 | 
 |06    |07/19 | :black_square_button: cap 8 | :black_square_button: rev | :black_square_button: cap 5 | 
 |06    |07/26 | :black_square_button: cap 9 | :black_square_button: rev | :black_square_button: rev | 
