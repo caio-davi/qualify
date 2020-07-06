@@ -2,6 +2,22 @@
 
 Mark Allen Weiss
 
+## Chapter 2
+
+### 2.7
+
+| Code # | Big-Oh | N=10 | N =100  | N = 1000 |
+| ------ | ------ | ---- | ------- | -------- |
+| 1      | O(N)   | 1us  | 10us    | 114us    |
+| 2      | O(N^2) | 20us | 1008us  | 43764us  |
+| 3      | O(N^3) | 93us | 49.9 ms | 34.84s   |
+| 4      | O(N^2) | 6us  | 227us   | 15295us  |
+
+| Code # | Big-Oh | N=10 | N =20 | N = 40 |
+| ------ | ------ | ---- | ----- | ------ |
+| 5      | O(N^5) | 1ms  | 16ms  | 266ms   |
+| 6      | O(N^4) | 3us  | 0.2ms | 1.9ms  |
+
 ## Chapter 3
 
 ### 3.1
@@ -234,19 +250,22 @@ b. Nodes `G`, `H`, `I`, `L`, `M`, `K`.
 | `L`  | `J`    | -        | `M`      | 4     | 0      |
 | `M`  | `J`    | -        | `L`      | 4     | 0      |
 
-### 4.3 
+### 4.3
+
 4
 
 ### 4.4
+
 There are N nodes, each of them have 2 pointers for their children totalizing 2N pointers. Except for the root, each node will also have one incoming pointer, totalizing N-1 poiters used. Therefore, there will be N+1 `nullptr`.
 
 ### 4.8
 
-Prefix :  - * * a b + c d e
-Infix:   (a * b * (c  + d))  - e
-Postfix: a b * c d + * e -
+Prefix : - \* _ a b + c d e
+Infix: (a _ b _ (c + d)) - e
+Postfix: a b _ c d + \* e -
 
-### 4.9 
+### 4.9
+
 a.Insertion:
 
 ![](./images/ex49a.png)
