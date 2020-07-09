@@ -1,5 +1,7 @@
 # Data Structures and Algorithms – CSCE 221
 
+[Exercises](./exercises/README.md)
+
 1. Data Structures
 
 - 1.1 Stacks
