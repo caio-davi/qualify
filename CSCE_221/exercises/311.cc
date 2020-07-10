@@ -82,6 +82,15 @@ void List::remove(int value){
     }
 }
 
+void List::swap(Node* before){
+    Node* first = before-> next;
+    Node* second = first-> next;
+    Node* after = second-> next;
+    before->next = second;
+    second->next = first;
+    first->next = after;
+}
+
 int main(){ 
 
     List head = List();
