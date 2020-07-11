@@ -19,7 +19,7 @@
   - [ ] Red‐black trees
 - 1.5 Hash Tables
   - [ ] The heap data structure
-  - [ ] Hash tables
+  - [x] Hash tables
 - 1.6 Graphs
   - [ ] Data structure of graphs
   - [ ] The edge list
