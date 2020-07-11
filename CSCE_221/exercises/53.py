@@ -24,6 +24,16 @@ def quadratic_hash (num, i):
         colisions = colisions + 1
         return quadratic_hash(h + i**2 , i)
 
+def cubic_hash (num, i):
+    global colisions
+    h = num % table_size
+    i = i + 1
+    if(hash[h] == None):
+        return h
+    else:
+        colisions = colisions + 1
+        return quadratic_hash(h + i**3 , i)
+
 def double_hash (num, i):
     global colisions
     h = num % table_size
@@ -41,6 +51,8 @@ def linear_insert(num):
 def quadratic_insert(num):
     hash[quadratic_hash(num, 0)] = num
 
+def cubic_insert(num):
+    hash[cubic_hash(num, 0)] = num
 
 def double_insert(num):
     hash[quadratic_hash(num, 0)] = num
@@ -51,6 +63,6 @@ def print_hash():
 
 
 for i in range(long_random_size):
-    double_insert(random.randint(0, long_random_size))
+    cubic_insert(random.randint(0, long_random_size))
 
 print(colisions)

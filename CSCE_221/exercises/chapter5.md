@@ -88,11 +88,22 @@ We can use [this code](./53.py) to rehash the tables of the last question. There
 [Code](./53.py).
 All coding considering table_size = 10 \* N.
 
-| Array Size | Linear Probing | Quadratic Probing | Double Hashing |
-| ---------- | -------------- | ----------------- | -------------- |
-| 10         | 14             | 7                 | 3              |
-| 100        | 424            | 133               | 117            |
-| 1000       | 12896          | 2101              | 2011           |
+| N    | Linear Probing | Quadratic Probing | Double Hashing |
+| ---- | -------------- | ----------------- | -------------- |
+| 10   | 14             | 7                 | 3              |
+| 100  | 424            | 133               | 117            |
+| 1000 | 12896          | 2101              | 2011           |
 
 #### 5.4
+
 Assuming a table size `N` and `e` elements on it, and a threshould `t`, such `t = e/N` would require a rehash, therefore `e = t*N`. After a rehash, the reduced table have a size `RN = N/2`, with the same number `e` elements. This new table would need `2*RN` elements to do a incresing rehash, wich means `2RN-e` insertions, or `N-tN`. By definition, `t` is the ratio needed to a new rehash, so it would need delete `e = tN` elements to have a new decreasing rehash. In order to optimize the hashtable, we should make the number of insertions equal to the number of deletions. So `N-tN = tN`, which leads to **`t=1/2`**.
+
+#### 5.8
+Yes, we can notice a sligthly improvement, as illustrated in the following table: 
+| N    | Cubic Probing |
+| ---- | ------------- |
+| 10   | 4             |
+| 100  | 112           |
+| 1000 | 1873          |
+
+*(same [code](./53.py) from ex 5.3)
