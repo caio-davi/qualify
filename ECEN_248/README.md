@@ -3,7 +3,7 @@
 ## Book:
 
 Frank Vahid. Computer Digital Design with RTL Design, VHDL, and Verilog.
-[Exercises](./exercises.md)
+[Exercises](./exercises/README.md)
 
 ### Exam's Contents:
 
