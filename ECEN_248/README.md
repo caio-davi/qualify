@@ -36,7 +36,7 @@ Frank Vahid. Computer Digital Design with RTL Design, VHDL, and Verilog.
 
 - [x] Latches, Flip-flops, Registers
 - [x] Counters
-- [ ] State machines
+- [x] State machines
 - [ ] Incomplete specification and non-determinism
 
 5. MOS based Logic Circuits
