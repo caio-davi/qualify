@@ -21,10 +21,10 @@
   - [ ] The heap data structure
   - [x] Hash tables
 - 1.6 Graphs
-  - [ ] Data structure of graphs
-  - [ ] The edge list
-  - [ ] The adjacency list
-  - [ ] The adjacency matrix
+  - [x] Data structure of graphs
+  - [x] The edge list
+  - [x] The adjacency list
+  - [x] The adjacency matrix
 
 2. Algorithms
 
