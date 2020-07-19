@@ -1,6 +1,15 @@
 #include <iostream>
 using namespace std;
 
+void print(int pointer){
+    cout << pointer << "\n";
+}
+
+void printPointer(int* pointer){
+    cout << *pointer << "\n";
+    cout << pointer << "\n";
+}
+
 int main ()
 {
 
@@ -13,10 +22,10 @@ int main ()
     cout << value << "\n";
 
     value++;
-    
-    cout << pointer << "\n";
-    cout << *pointer << "\n";
 
+    // print(&pointer);
+    printPointer(pointer);
+    printPointer(&value);
 
 
     return 0;

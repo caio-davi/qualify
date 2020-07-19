@@ -12,8 +12,8 @@
 - 1.3 Lists
   - [x] Linked lists
 - 1.4 Trees
-  - [ ] The tree abstract data type and data structures for representing trees
-  - [ ] Properties of binary trees
+  - [x] The tree abstract data type and data structures for representing trees
+  - [x] Properties of binary trees
   - [ ] Binary search trees
   - [ ] AVL trees
   - [ ] Red‐black trees
@@ -29,7 +29,7 @@
 2. Algorithms
 
 - [ ] Sorting
-  - [ ] Merge‐sort
+  - [x] Merge‐sort
   - [ ] Quick‐sort
 - [ ] The Huffman coding algorithm
 - [ ] Solving the longest common subsequence problem using dynamic programming
