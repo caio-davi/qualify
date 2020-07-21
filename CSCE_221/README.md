@@ -40,7 +40,7 @@
   - [ ] Depth‐first search
   - [ ] Breadth‐first search
 - [ ] Topological order and sorting of directed acyclic graphs
-- [ ] Shortest paths: Dijkstra’s algorithm
+- [x] Shortest paths: Dijkstra’s algorithm
 - [ ] Minimum spanning trees
   - [ ] Kruskal’s algorithm
   - [ ] Prim’s algorithm

@@ -62,14 +62,34 @@ Vertex getMinCost(vector<tuple<Vertex, int, string>> edgesCosts){
     return vMin;
 }
 
-void printStringVector(vector<string> visited){
-    for(auto i : visited){
+void printStringVector(vector<string> v){
+    for(auto i : v){
         cout << i << " ";
     }
     cout << " \n";
 }
 
+void printStringList(list<string> l){
+    for(auto i : l){
+        cout << i << " ";
+    }
+    cout << " \n";
+}
+
+void printStringListInverse(list<string> l){
+    while(!l.empty()){
+        cout << l.back() << " ";
+        l.pop_back();
+    }
+    cout << " \n";
+
+}
+
 bool wasVisited(vector<string> visited, string name){
+    return (std::find(visited.begin(), visited.end(), name) != visited.end());
+    }
+
+bool wasVisited(list<string> visited, string name){
     return (std::find(visited.begin(), visited.end(), name) != visited.end());
     }
 
@@ -155,9 +175,45 @@ void dijkstra (Vertex v){
     printEdgesCosts(edgesCosts);
 }
 
+void dfs(Vertex *v, vector<string>* visited){
+    string next = v->name;
+    if(!wasVisited(*visited, next)){
+        visited->push_back(v->name);
+        cout << v->name << " -> ";
+        for(int i = 0; i < v->numEdges; i++){
+            dfs(get<1>(v->edges[i]), visited);
+        }
+    }
+}
 
+int indegree(Vertex v, Vertex u, vector<string>* visited, int count){
+    string current = v.name;
+    if(v.numEdges == 0){
+        return 0;
+    }
+        count = count + 1;
+        visited->push_back(v.name);
+        for(int i = 0; i < v.numEdges; i++){
+            Vertex* next = get<1>(v.edges[i]);
+            if(v.name == u.name) return count;
+            count = indegree(*next, u, visited, count);
+        }
+    // else{
+    //     count = 0;
+    // }
+    return count;
+}
+
+int indegree(Vertex v, Vertex u){
+    vector<string> visited; 
+    int count = 0;
+    return indegree(v, u, &visited, count);
+}
   
-int main(){ 
+int main(){
+
+    bool allowCycles = false;
+
     Vertex s = Vertex("s");
     Vertex a = Vertex("A");
     Vertex b = Vertex("B");
@@ -179,14 +235,16 @@ int main(){
 
     b.addEdge(2, &c);
 
-    d.addEdge(3, &a);
+    c.addEdge(4, &t);
+
+    if(allowCycles) d.addEdge(3, &a);
     d.addEdge(3, &e);
 
     e.addEdge(2, &c);
     e.addEdge(3, &f);
     e.addEdge(3, &i);
 
-    f.addEdge(1, &c);
+    if(allowCycles)f.addEdge(1, &c);
     f.addEdge(3, &t);
 
     g.addEdge(2, &d);
@@ -199,7 +257,25 @@ int main(){
     i.addEdge(1, &f);
     i.addEdge(4, &t);
 
-    dijkstra(s);
+    // // dijkstra(s);
+    // vector<string> v;
+    // cout << "DFS: ";
+    // dfs(&s, &v);
+    // cout << "\n";
+    // cout << "BFS: "; 
+    // bfs(&s);
 
+    // cout << "Indegree ss: " << indegree(s, s) << "\n";
+    cout << "Indegree sA: " << indegree(s, a) << "\n";
+    cout << "Indegree sB: " << indegree(s, b) << "\n";
+    cout << "Indegree sC: " << indegree(s, c) << "\n";
+    cout << "Indegree sD: " << indegree(s, d) << "\n";
+    cout << "Indegree sE: " << indegree(s, e) << "\n";
+    cout << "Indegree sF: " << indegree(s, f) << "\n";
+    cout << "Indegree sG: " << indegree(s, g) << "\n";
+    cout << "Indegree sH: " << indegree(s, h) << "\n";
+    cout << "Indegree sI: " << indegree(s, i) << "\n";
+
+    // cout << "\n";
     return 0; 
 } 
