@@ -137,7 +137,7 @@ void updateRow( vector<tuple<Vertex, int, string>>* edgesCosts,
 void dijkstra(  Vertex v,
                 vector<string> visited,
                 vector<tuple<Vertex, int, string>> *edgesCosts){
-    if(v.name == "t") return; 
+    if(v.numEdges == 0) return; 
     int residual = getCost(*edgesCosts, v.name);
     for(int i = 0; i < v.numEdges; i++){
         if(!wasVisited(visited, get<1>(v.edges[i])->name)){
@@ -184,30 +184,6 @@ void dfs(Vertex *v, vector<string>* visited){
             dfs(get<1>(v->edges[i]), visited);
         }
     }
-}
-
-int indegree(Vertex v, Vertex u, vector<string>* visited, int count){
-    string current = v.name;
-    if(v.numEdges == 0){
-        return 0;
-    }
-        count = count + 1;
-        visited->push_back(v.name);
-        for(int i = 0; i < v.numEdges; i++){
-            Vertex* next = get<1>(v.edges[i]);
-            if(v.name == u.name) return count;
-            count = indegree(*next, u, visited, count);
-        }
-    // else{
-    //     count = 0;
-    // }
-    return count;
-}
-
-int indegree(Vertex v, Vertex u){
-    vector<string> visited; 
-    int count = 0;
-    return indegree(v, u, &visited, count);
 }
   
 int main(){
@@ -257,25 +233,9 @@ int main(){
     i.addEdge(1, &f);
     i.addEdge(4, &t);
 
-    // // dijkstra(s);
-    // vector<string> v;
-    // cout << "DFS: ";
-    // dfs(&s, &v);
-    // cout << "\n";
-    // cout << "BFS: "; 
-    // bfs(&s);
+    dijkstra(s);
+    
 
-    // cout << "Indegree ss: " << indegree(s, s) << "\n";
-    cout << "Indegree sA: " << indegree(s, a) << "\n";
-    cout << "Indegree sB: " << indegree(s, b) << "\n";
-    cout << "Indegree sC: " << indegree(s, c) << "\n";
-    cout << "Indegree sD: " << indegree(s, d) << "\n";
-    cout << "Indegree sE: " << indegree(s, e) << "\n";
-    cout << "Indegree sF: " << indegree(s, f) << "\n";
-    cout << "Indegree sG: " << indegree(s, g) << "\n";
-    cout << "Indegree sH: " << indegree(s, h) << "\n";
-    cout << "Indegree sI: " << indegree(s, i) << "\n";
-
-    // cout << "\n";
+    cout << "\n";
     return 0; 
 } 

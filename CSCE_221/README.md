@@ -34,10 +34,11 @@
 - [ ] The Huffman coding algorithm
 - [ ] Solving the longest common subsequence problem using dynamic programming
 - [ ] Basic algorithms on trees
-  - [ ] Pre‐order traversal
-  - [ ] Post‐order traversal
+  - [X] Pre‐order traversal
+  - [X] In‐order traversal
+  - [X] Post‐order traversal
 - [ ] Graph traversal
-  - [ ] Depth‐first search
+  - [x] Depth‐first search
   - [ ] Breadth‐first search
 - [ ] Topological order and sorting of directed acyclic graphs
 - [x] Shortest paths: Dijkstra’s algorithm
