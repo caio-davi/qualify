@@ -33,7 +33,7 @@
   - [ ] Quick‐sort
 - [ ] The Huffman coding algorithm
 - [ ] Solving the longest common subsequence problem using dynamic programming
-- [ ] Basic algorithms on trees
+- [x] Basic algorithms on trees
   - [X] Pre‐order traversal
   - [X] In‐order traversal
   - [X] Post‐order traversal

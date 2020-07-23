@@ -6,5 +6,6 @@
 - [Chapter 1](./chapter1.md)
 - [Chapter 2](./chapter2.md)
 - [Chapter 3](./chapter3.md)
+- [Chapter 7](./chapter7.md)
 
 [Back to CSCE 221](../README.md)
