@@ -21,8 +21,8 @@
 |05    |06/07 | :ballot_box_with_check: cap 4 & 12.2 | :ballot_box_with_check: cap 3 | :ballot_box_with_check: cap 2 | 
 |06    |06/14 | :ballot_box_with_check: cap 5 | :ballot_box_with_check:cap 3 | :ballot_box_with_check: cap 3 | 
 |07    |06/21 | :black_square_button: cap 6 | :ballot_box_with_check: cap 4 | :ballot_box_with_check:cap 3 | 
-|08    |06/28 | :black_square_button: cap 6 | :black_square_button: cap 5 | :ballot_box_with_check: cap 4 | 
-|09    |07/05 | :ballot_box_with_check: cap 7 | :black_square_button: cap 6 | :ballot_box_with_check: cap 4 | 
+|08    |06/28 | :black_square_button: cap 6 | :black_square_button: cap 5 & 6 | :ballot_box_with_check: cap 4 | 
+|09    |07/05 | :ballot_box_with_check: cap 7 | :ballot_box_with_check: cap 7 | :ballot_box_with_check: cap 4 | 
 |10    |07/12 | :ballot_box_with_check: cap 7 | :ballot_box_with_check: cap 7 | :ballot_box_with_check: cap 5 | 
 |11    |07/19 | :black_square_button: cap 8 | :black_square_button: rev | :black_square_button: cap 5 | 
 |12    |07/26 | :black_square_button: cap 9 | :black_square_button: rev | :black_square_button: rev | 

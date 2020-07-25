@@ -269,7 +269,7 @@ Similar to the previous question. Since we need 8 lookup tables and we are using
 | 0       | 1       |     | 1       | _0_     |
 | 0       | 0       |     | 1       | _0_     |
 | 0       | 1       |     | 1       | _0_     |
-| 0       | 0       |     | 1       | _0_     |
+| 1       | 0       |     | 1       | _0_     |
 | 1       | 1       |     | 1       | _0_     |
 
 Both LUP1 and LUP2 will bypass their internal memory, which give this configuration memory:
@@ -298,7 +298,7 @@ Thus, the table switch will be:
 Finally, this will give us the following bit file program:
 
 ```
-00000001 01010101 0 0 00 01 11 00011111 00000000 0 0
+00000011 01010101 0 0 00 01 11 00011111 00000000 0 0
 ```
 
 #### 7.28
@@ -337,7 +337,7 @@ P4 (`d`) --> **m3 --> o1**
 | ------------- |
 | 00            |
 | 11            |
-| _00_            |
+| _00_          |
 
 Bit file program:
 
@@ -355,7 +355,7 @@ Bit file program:
 | LUP1 d1 | LUP1 d0 |     | LUP2 d1 | LUP2 d0 |
 | ------- | ------- | --- | ------- | ------- |
 | 1       | 1       |     | 0       | _0_     |
-| 0       | 0       |     | 0       | _0_     |
+| 1       | 0       |     | 0       | _0_     |
 | 0       | 1       |     | 0       | _0_     |
 | 0       | 0       |     | 1       | _0_     |
 | 0       | 1       |     | 1       | _0_     |
@@ -374,8 +374,8 @@ Both LUP1 and LUP2 will bypass their internal memory, which give this configurat
 | -|-|
 
 The Switch matrix should pass the following:
-LUP1d0 (`c`) **m0 --> o0**
-LUP1d1 (`ab`) **m2 --> o1**
+LUP1d0 (`c'`) **m0 --> o0**
+LUP1d1 (`a'b'`) **m2 --> o1**
 P4 (`d`) --> **m3 --> o2**
 
 Thus, the table switch will be:
@@ -389,5 +389,57 @@ Thus, the table switch will be:
 Finally, this will give us the following bit file program:
 
 ```
-00000001 01010101 0 0 00 01 11 00011111 00000000 0 0
+11000000 10101010 0 0 00 01 11 00011111 00000000 0 0
 ```
+
+#### 7.30
+
+![](./images/730.png)
+
+#### 7.31
+
+![](./images/731.png)
+
+#### 7.32
+
+Inputs:
+
+I1 : `a`
+I2 : `b`
+I3 : `c` (`Cin`) 
+
+O1: `s`
+O2: `Cout`
+
+Truth Table:
+
+| I1(`a`) | I2(`b`) | I3(`c`) | O1(`s`) | O2(`Co`) |
+| ------- | ------- | ------- | ------- | -------- |
+| 0       | 0       | 0       | 0       | 0        |
+| 0       | 0       | 1       | 1       | 0        |
+| 0       | 1       | 0       | 1       | 0        |
+| 0       | 1       | 1       | 0       | 1        |
+| 1       | 0       | 0       | 1       | 0        |
+| 1       | 0       | 1       | 0       | 1        |
+| 1       | 1       | 0       | 0       | 1        |
+| 1       | 1       | 1       | 1       | 1        |
+
+```
+s = a'b'c + a'bc' + ab'c' + abc
+Co = a'bc + ab'c + abc' + abc
+```
+
+The array to PLD memory:
+`100101 011001 010110 101010 101001 100110 011010 101010`
+
+#### 7.35
+
+(a) FPGA
+(b) full-custom IC
+(c) FPGA
+(d) Standart Cell
+(e) FPGA
+
+#### 7.36
+
+None of them. All those technologies are capable to implement custom and programable processors. 

@@ -21,14 +21,14 @@ Frank Vahid. Computer Digital Design with RTL Design, VHDL, and Verilog.
 - [x] Multi-level logic optimization
 - [x] Timing analysis
 - [x] Special circuits – MUXes, Decoders, Encoders, 
-- [ ] PLAs, FPGAs, CPLDs,
+- [x] PLAs, FPGAs, CPLDs,
 
 3. Arithmetic Circuits
 
 - [x] Addition
 - [x] Subtraction and 2's complement
 - [x] Multiplication
-- [ ] Division
+- [x] Division
 - [ ] Arithmetic Sums-of-products
 - [ ] Floating point arithmetic
 
