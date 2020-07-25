@@ -30,22 +30,40 @@ Truth Table:
 
 The implementation is a simple single access to the memory array containing the outputs in the truth table.
 
-#### 7.19
+> To avoid drawing in Markdown, the following description will be used to describe all LUP inputs and outputs, followed by a table with the LUP itself (This format will be used for the next questions too):
+
+**LUP1 d1** --> implementing: `a+bc`| inputs: a b c | output: F
+
+| LUP1 |
+| ---- |
+| 0    |
+| 0    |
+| 0    |
+| 1    |
+| 1    |
+| 1    |
+| 1    |
+| 1    |
 
 **LUP1 d1** --> implementing: `ab*1`| inputs: a b 1 | output: d1
+
+#### 7.19
+
+**LUP1 d1** --> implementing: `ab*1`| inputs: a b 1 | output: LUP1d1
 **LUP1 d0** --> Not used.
-**LUP2 d1** --> implementing: `d1 + cd`| inputs: a b d1 | output: d1
+**LUP2 d1** --> implementing: `LUP1d1 + cd`| inputs: a b d1 | output: LUP2d1 (`F()`)
 **LUP2 d0** --> Not used.
-| LUP1 d1 | LUP1 d0 | | LUP2 d1 | LUP2 d0 |
+
+| LUP1 d1 | LUP1 d0 |     | LUP2 d1 | LUP2 d0 |
 | ------- | ------- | --- | ------- | ------- |
-| 0 | _0_ | | 0 | _0_ |
-| 0 | _0_ | | 0 | _0_ |
-| 0 | _0_ | | 0 | _0_ |
-| 1 | _0_ | | 1 | _0_ |
-| 0 | _0_ | | 1 | _0_ |
-| 0 | _0_ | | 1 | _0_ |
-| 0 | _0_ | | 1 | _0_ |
-| 1 | _0_ | | 1 | _0_ |
+| 0       | _0_     |     | 0       | _0_     |
+| 0       | _0_     |     | 0       | _0_     |
+| 0       | _0_     |     | 0       | _0_     |
+| 1       | _0_     |     | 1       | _0_     |
+| 0       | _0_     |     | 1       | _0_     |
+| 0       | _0_     |     | 1       | _0_     |
+| 0       | _0_     |     | 1       | _0_     |
+| 1       | _0_     |     | 1       | _0_     |
 
 #### 7.20
 
@@ -235,3 +253,141 @@ Similar to the previous question. Since we need 8 lookup tables and we are using
 | 0     |     | 0     |     | 0     |     | 0     |     | 0     |
 | 0     |     | 0     |     | 0     |     | 0     |     | 0     |
 | 1     |     | 1     |     | 1     |     | 1     |     | 1     |
+
+#### 7.27
+
+**LUP1 d1** --> implementing: `ab`| inputs: a b c | output: LUP1d1
+**LUP1 d0** --> implementing: `c` | inputs: a b c | output: LUP1d0
+**LUP2 d1** --> implementing: `LUP1d1 + (LUP1d0 * d)` | inputs: LUP1d1, LUP1d0 , d | output: LUP2d1 `F()`
+**LUP2 d0** --> Not used.
+
+| LUP1 d1 | LUP1 d0 |     | LUP2 d1 | LUP2 d0 |
+| ------- | ------- | --- | ------- | ------- |
+| 0       | 0       |     | 0       | _0_     |
+| 0       | 1       |     | 0       | _0_     |
+| 0       | 0       |     | 0       | _0_     |
+| 0       | 1       |     | 1       | _0_     |
+| 0       | 0       |     | 1       | _0_     |
+| 0       | 1       |     | 1       | _0_     |
+| 0       | 0       |     | 1       | _0_     |
+| 1       | 1       |     | 1       | _0_     |
+
+Both LUP1 and LUP2 will bypass their internal memory, which give this configuration memory:
+
+**LUP1** :
+| 0| 0|
+| -|-|
+
+**LUP2** :
+| 0| 0|
+| -|-|
+
+The Switch matrix should pass the following:
+LUP1d0 (`c`) **m0 --> o0**
+LUP1d1 (`ab`) **m2 --> o1**
+P4 (`d`) --> **m3 --> o2**
+
+Thus, the table switch will be:
+
+| Switch matrix |
+| ------------- |
+| 00            |
+| 01            |
+| 11            |
+
+Finally, this will give us the following bit file program:
+
+```
+00000001 01010101 0 0 00 01 11 00011111 00000000 0 0
+```
+
+#### 7.28
+
+**LUP1 d1** --> Not used.
+**LUP1 d0** --> implementing: `abc`| inputs: a b c | output: LUP1d1
+**LUP2 d1** --> Not used.
+**LUP2 d0** --> implementing: `d` | inputs: LUP1d1 c o2 | output: LUP2d0 (`F()`)
+
+| LUP1 d1 | LUP1 d0 |     | LUP2 d1 | LUP2 d0 |
+| ------- | ------- | --- | ------- | ------- |
+| _0_     | 0       |     | _0_     | 0       |
+| _0_     | 0       |     | _0_     | 0       |
+| _0_     | 0       |     | _0_     | 0       |
+| _0_     | 0       |     | _0_     | 0       |
+| _0_     | 0       |     | _0_     | 0       |
+| _0_     | 0       |     | _0_     | 0       |
+| _0_     | 0       |     | _0_     | 0       |
+| _0_     | 1       |     | _0_     | 1       |
+
+Configuration memory:
+
+**LUP1** :
+| 0| 0|
+| -|-|
+
+**LUP2** :
+| 0| 0|
+| -|-|
+
+The Switch matrix should pass the following:
+LUP1d0 (`c`) **m0 --> o0**
+P4 (`d`) --> **m3 --> o1**
+
+| Switch matrix |
+| ------------- |
+| 00            |
+| 11            |
+| _00_            |
+
+Bit file program:
+
+```
+00000000 00000001 0 0 00 11 00 00000000 00000001 0 0
+```
+
+#### 7.29
+
+**LUP1 d1** --> implementing: `a'b'`| inputs: a b c | output: LUP1d1
+**LUP1 d0** --> implementing: `c'` | inputs: a b c | output: LUP1d0
+**LUP2 d1** --> implementing: `LUP1d1 + (LUP1d0 * d)` | inputs: LUP1d1, LUP1d0 , d | output: LUP2d1 `F()`
+**LUP2 d0** --> Not used.
+
+| LUP1 d1 | LUP1 d0 |     | LUP2 d1 | LUP2 d0 |
+| ------- | ------- | --- | ------- | ------- |
+| 1       | 1       |     | 0       | _0_     |
+| 0       | 0       |     | 0       | _0_     |
+| 0       | 1       |     | 0       | _0_     |
+| 0       | 0       |     | 1       | _0_     |
+| 0       | 1       |     | 1       | _0_     |
+| 0       | 0       |     | 1       | _0_     |
+| 0       | 1       |     | 1       | _0_     |
+| 0       | 0       |     | 1       | _0_     |
+
+Both LUP1 and LUP2 will bypass their internal memory, which give this configuration memory:
+
+**LUP1** :
+| 0| 0|
+| -|-|
+
+**LUP2** :
+| 0| 0|
+| -|-|
+
+The Switch matrix should pass the following:
+LUP1d0 (`c`) **m0 --> o0**
+LUP1d1 (`ab`) **m2 --> o1**
+P4 (`d`) --> **m3 --> o2**
+
+Thus, the table switch will be:
+
+| Switch matrix |
+| ------------- |
+| 00            |
+| 01            |
+| 11            |
+
+Finally, this will give us the following bit file program:
+
+```
+00000001 01010101 0 0 00 01 11 00011111 00000000 0 0
+```
