@@ -93,3 +93,145 @@ G(w,x,y,z) = w' (x'y + xyz')
 | 0       | 0       |     | 1       | 0       |
 | 0       | 1       |     | 1       | 1       |
 | 0       | 1       |     | 1       | 0       |
+
+#### 7.22
+
+**LUP1 d1** --> implementing: `abc` | inputs: a b c | output: d1
+**LUP1 d0** --> implementing: `a'` | inputs: a b c | output: d0 (G)
+**LUP2 d1** --> implementing: `d1 + d` | inputs: d1, d0, d | output: d1 (F)
+**LUP2 d0** --> Not used.
+
+| LUP1 d1 | LUP1 d0 |     | LUP2 d1 | LUP2 d0 |
+| ------- | ------- | --- | ------- | ------- |
+| 0       | 1       |     | 0       | _0_     |
+| 0       | 1       |     | 1       | _0_     |
+| 0       | 1       |     | 0       | _0_     |
+| 0       | 1       |     | 1       | _0_     |
+| 0       | 0       |     | 1       | _0_     |
+| 0       | 0       |     | 1       | _0_     |
+| 0       | 0       |     | 1       | _0_     |
+| 1       | 0       |     | 1       | _0_     |
+
+#### 7.23
+
+```
+  a1    b1                      a1    b1
+  |     |                       |     |
+  V     V                       V     V
+ _____________                ____________
+|           Gt|---- InGt --> |            |---> OutGt
+|           Eq|---- InEq --> |            |---> OutEq
+|           Lt|---- InLt --> |            |---> OutLt
+ ‾‾‾‾‾‾‾‾‾‾‾‾‾                ‾‾‾‾‾‾‾‾‾‾‾‾
+```
+
+```
+InGt = a1 *  b1'
+InLt = a1' * b1
+InEq = a1 XNOR b1
+OutGt = InGt + (InEq * a0 * b0')
+OutLt = InLt + (InEq * a0' * b0)
+OutEq = InEq * ( a0 XNOR b0)
+```
+
+**LUP1 d1** --> implementing: `a1 * b1'` | inputs: a1 b1 0 | output: LUP1d1 (`InGt`)
+**LUP1 d0** --> implementing: `a1' * b1` | inputs: a1 b1 0 | output: LUP1d0 (`InLt`)
+
+**LUP2 d1** --> implementing: `a1 XNOR b1` | inputs: a1 b1 0 | output: LUP2d1(`InEq`)
+**LUP2 d0** --> Not used.
+
+**LUP3 d1** --> implementing: `InEq * a0 * b0'` | inputs: a0 b0 LUP2d1(`InEq`) | output: LUP2d1 (`x`)
+**LUP3 d0** --> implementing: `InEq * a0' * b0` | inputs: a0 b0 LUP2d1(`InEq`) | output: LUP2d0 (`y`)
+
+**LUP4 d1** --> implementing: `InGt + x` | inputs: LUP1d1 LUP2d1 0 | output: LUP4d1 (`OutGt`)
+**LUP5 d1** --> implementing: `InLt + y` | inputs: LUP1d0 LUP2d0 0 | output: LUP5d1 (`OutLt`)
+**LUP6 d1** --> implementing: `InEq * ( a0 XNOR b0)` | inputs: LUP2d1 a0 b0 | output: LUP6d1 (`OutEq`)
+
+| LUP1 d1 | LUP1 d0 |     | LUP2 d1 | LUP2 d0 |
+| ------- | ------- | --- | ------- | ------- |
+| 0       | 0       |     | 1       | _0_     |
+| 0       | 1       |     | 0       | _0_     |
+| 0       | 0       |     | 0       | _0_     |
+| 1       | 0       |     | 1       | _0_     |
+| _0_     | _0_     |     | _1_     | _0_     |
+| _0_     | _1_     |     | _0_     | _0_     |
+| _0_     | _0_     |     | _0_     | _0_     |
+| _1_     | _0_     |     | _1_     | _0_     |
+
+| LUP3 d1 | LUP3 d0 |     | LUP4 d1 |     | LUP5d1 |     | LUP6d1 |
+| ------- | ------- | --- | ------- | --- | ------ | --- | ------ |
+| 0       | 0       |     | 0       |     | 0      |     | 0      |
+| 0       | 0       |     | 1       |     | 1      |     | 0      |
+| 0       | 0       |     | 1       |     | 1      |     | 0      |
+| 0       | 0       |     | 1       |     | 1      |     | 0      |
+| 0       | 0       |     | _0_     |     | _0_    |     | 1      |
+| 0       | 1       |     | _1_     |     | _1_    |     | 0      |
+| 1       | 0       |     | _1_     |     | _1_    |     | 0      |
+| 0       | 0       |     | _1_     |     | _1_    |     | 1      |
+
+#### 7.24
+
+```
+  a3  b3 c2      a2  b2 c1      a1  b1 c0      a0  b0 0
+  |   |  |       |   |  |       |   |  |       |   |  |
+  V   V  V       V   V  V       V   V  V       V   V  V
+ ___________    ___________    ___________    ___________
+|           |  |           |  |           |  |           |
+| FullAdder |  | FullAdder |  | FullAdder |  | FullAdder |
+|           |  |           |  |           |  |           |
+ ‾‾|‾‾‾‾|‾‾‾    ‾‾|‾‾‾‾|‾‾‾    ‾‾|‾‾‾‾|‾‾‾    ‾‾|‾‾‾‾|‾‾‾
+   |    |         |    |         |    |         |    |
+   V    V         V    V         V    V         V    V
+   s4   s3        c2   s2        c1   s1        c0   s0
+```
+
+**LUP1 d1** --> implementing: `a0*0 + b0 * 0 + a0b0` | inputs: a0 b0 0 | output: LUP1d1 (`c0`)
+**LUP1 d0** --> implementing: `a0 XOR b0 XOR 0` | inputs: a0 b0 0 | output: LUP1d0 (`s0`)
+**LUP2 d1** --> implementing: `a1c0 + b1c0 + a1b1` | inputs: a1 b1 c0 | output: LUP2d1 (`c1`)
+**LUP2 d0** --> implementing: `a1 XOR b1 XOR c0` | inputs: a1 b1 c0 | output: LUP2d0 (`s1`)
+**LUP3 d1** --> implementing: `a2c1 + b2c1 + a2b2` | inputs: a2 b2 c1 | output: LUP3d1 (`c2`)
+**LUP3 d0** --> implementing: `a2 XOR b2 XOR c1` | inputs: a2 b2 c1 | output: LUP3d0 (`s2`)
+**LUP4 d1** --> implementing: `a3c2 + b3c2 + a3b3` | inputs: a3 b3 c2 | output: LUP4d1 (`s3`)
+**LUP4 d0** --> implementing: `a3 XOR b3 XOR c2` | inputs: a3 b3 c2 | output: LUP4d0 (`s4`)
+
+| LUP4 d1 | LUP4 d0 |     | LUP3 d1 | LUP3 d0 |     | LUP2 d1 | LUP2 d0 |     | LUP1 d1 | LUP1 d0 |
+| ------- | ------- | --- | ------- | ------- | --- | ------- | ------- | --- | ------- | ------- |
+| 0       | 0       |     | 0       | 0       |     | 0       | 0       |     | 0       | 0       |
+| 0       | 1       |     | 0       | 1       |     | 0       | 1       |     | 0       | 1       |
+| 0       | 1       |     | 0       | 1       |     | 0       | 1       |     | 0       | 1       |
+| 1       | 0       |     | 1       | 0       |     | 1       | 0       |     | 1       | 0       |
+| 0       | 1       |     | 0       | 1       |     | 0       | 1       |     | _0_     | _0_     |
+| 1       | 0       |     | 1       | 0       |     | 1       | 0       |     | _0_     | _1_     |
+| 1       | 0       |     | 1       | 0       |     | 1       | 0       |     | _0_     | _1_     |
+| 1       | 0       |     | 1       | 0       |     | 1       | 0       |     | _1_     | _0_     |
+
+#### 7.25
+
+Similar to the previous question. Since we need 8 lookup tables and we are using 4x1 LUPs, we will need 8 LUPs. We will also ignore one of the entries and the last 8 positions of each table.
+
+#### 7.26
+
+**LUP1** --> implementing: `a0 XNOR b0 * a1 XNOR b1` | inputs: a0 a1 b0 b1 | output: LUP1
+**LUP2** --> implementing: `a2 XNOR b2 * a3 XNOR b3` | inputs: a2 a3 b2 b3 | output: LUP2
+**LUP3** --> implementing: `a4 XNOR b4 * a5 XNOR b5` | inputs: a4 a5 b4 b5 | output: LUP3
+**LUP4** --> implementing: `a6 XNOR b6 * a7 XNOR b7` | inputs: a6 a7 b6 b7 | output: LUP4
+**LUP5** --> implementing: `LUP1 * LUP2 * LUP3 * LUP4` | inputs: LUP1 LUP2 LUP3 LUP4 | output: LUP5 (`Eq`)
+
+| LUP 1 |     | LUP 2 |     | LUP 3 |     | LUP 4 |     | LUP 5 |
+| ----- | --- | ----- | --- | ----- | --- | ----- | --- | ----- |
+| 1     |     | 1     |     | 1     |     | 1     |     | 0     |
+| 0     |     | 0     |     | 0     |     | 0     |     | 0     |
+| 0     |     | 0     |     | 0     |     | 0     |     | 0     |
+| 1     |     | 1     |     | 1     |     | 1     |     | 0     |
+| 0     |     | 0     |     | 0     |     | 0     |     | 0     |
+| 0     |     | 0     |     | 0     |     | 0     |     | 0     |
+| 0     |     | 0     |     | 0     |     | 0     |     | 0     |
+| 0     |     | 0     |     | 0     |     | 0     |     | 0     |
+| 0     |     | 0     |     | 0     |     | 0     |     | 0     |
+| 0     |     | 0     |     | 0     |     | 0     |     | 0     |
+| 0     |     | 0     |     | 0     |     | 0     |     | 0     |
+| 0     |     | 0     |     | 0     |     | 0     |     | 0     |
+| 1     |     | 1     |     | 1     |     | 1     |     | 0     |
+| 0     |     | 0     |     | 0     |     | 0     |     | 0     |
+| 0     |     | 0     |     | 0     |     | 0     |     | 0     |
+| 1     |     | 1     |     | 1     |     | 1     |     | 1     |
