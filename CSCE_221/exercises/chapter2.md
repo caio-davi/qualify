@@ -60,7 +60,7 @@ b)N times to run all the itens in the Sum. Log N times to solve the exponentiati
 
 #### 2.14
 
-a) [code in python](./214,py)
+a) [code in python](./214.py)
 ```
 ('3 * ', 0, ' + ', 4) =
 ('3 * ', 4, ' + ', 8) =
