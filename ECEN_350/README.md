@@ -4,9 +4,7 @@
 
 Patterson, David A., and John L. Hennessy. Computer Organization and Design ARM Edition: The Hardware Software Interface. Morgan kaufmann, 2016.
 
-## Exercises:
-
-[Chapter 1](./exercises.md)
+[Exercises](./exercises.md)
 
 
 ## Contents:
@@ -65,4 +63,4 @@ Patterson, David A., and John L. Hennessy. Computer Organization and Design ARM 
 
 8. Peripherals and disk storage
 
-[back](../FollowUp.md)
+[back](../README.md)

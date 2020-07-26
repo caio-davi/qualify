@@ -233,7 +233,10 @@ int main(){
     i.addEdge(1, &f);
     i.addEdge(4, &t);
 
-    dijkstra(s);
+    // dijkstra(s);
+
+    vector<string> visited;
+    dfs(&s, &visited);
     
 
     cout << "\n";

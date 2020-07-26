@@ -11,13 +11,11 @@ using namespace std;
 class Graph{
 
 public:
-    vector<string> names;
-    list<int> edges;
+    vector<tuple<string, vector<int>>> nodes;
     int size;
 
     Graph();
-    void addVertex(string name);
-    void addEdge(string v, string u);
+    void addVertex(string name, vector<int> adjList);
     void printVertices();
     int getPosition(string name);
 
@@ -27,42 +25,26 @@ Graph::Graph(){
     size = 0; 
 }
 
-void Graph::addVertex(string name){
-    names.push_back(name);
-    size = ++size;
-}
-
-void Graph::addEdge(string vName, string uName){
-    int v = getPosition(vName);
-    int u = getPosition(uName);
-    edges[v].push_back(u);
+void Graph::addVertex(string name, vector<int> adjList){
+    nodes[size] = make_tuple(name, adjList);
 }
 
 void Graph::printVertices(){
-    for(int i = 0; i < size; i++){
-        cout << "["<< i << "]: " << names[i] << "\n";
+    for(auto node : nodes){
+        cout << get<0>(node) ;// << "AdjList: " << get<1>(node) << "\n";
     }
-}
-
-int Graph::getPosition(string name){
-    for(int i = 0; i < size; i++){
-        if(names[i]== name)
-            return i;
-    }
-    return 9999;
-
 }
 
 int main(){
 
     Graph g = Graph();
 
-    g.addVertex("A");
-    g.addVertex("B");
+    // vertex<int> adjListA = [0,1];
+
+    g.addVertex("A", {1});
+    g.addVertex("B", {0});
 
     g.printVertices();
 
-    cout << g.getPosition("A") << "\n";
-    g.addEdge("A", "B");
     return 1;
 }
