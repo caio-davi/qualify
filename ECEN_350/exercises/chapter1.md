@@ -137,19 +137,90 @@ Cload = 3.2 * 10^-8
 For the i5:
 ```
 Cload = (2*40)/(0.9^2 * 3.4 * 10^6)  
-Cload = 3.2 * 10^-8  
+Cload = 2.9 * 10^-8  
 ```
 
+#### 1.11.1
+ 0.9418
+#### 1.11.2
+ 12.86
+#### 1.11.3
+ 10%
+#### 1.11.4
+ 1.1 x 1.05 = 1.155 = 15.5%
+#### 1.11.5
+ new SPECratio = 0.86 = 14% decrease.
+#### 1.11.6
+ 1.3879
+#### 1.11.7
+ The CPI increased in 47.36%, while the clock rate increased in 33.33%. The instruction set had changed and the execution time as well, all those variables affects the CPI.
+#### 1.11.8
+ 50s, or 6.66% decrease.
+#### 1.11.9
+ 2146.58 x 10^9
+#### 1.11.10
+ 3.6 Ghz
 
-#### 1.11
 
-**1.11.1** 0.9418
-**1.11.2** 12.86
-**1.11.3** 10%
-**1.11.4** 1.1 x 1.05 = 1.155 = 15.5%
-**1.11.5** new SPECratio = 0.86 = 14% decrease.
-**1.11.6** 1.3879
-**1.11.7** The CPI increased in 47.36%, while the clock rate increased in 33.33%. The instruction set had changed and the execution time as well, all those variables affects the CPI.
-**1.11.8** 50s, or 6.66% decrease.
-**1.11.9** 2146.58 x 10^9
-**1.11.10** 3.6 Ghz
+#### 1.12.1
+
+| | P1 | P2 | 
+|- | -| -| 
+Clock| 4Ghz | 3GHz |
+CPI | 0.9 | 0.75 |
+Num Instructions | 5 * 10^9 | 1 * 10^9
+
+```
+CPU Time = (numInst * CPI)/ clock rate
+
+time_P1 = (5 * 10^9 * 0.9 )/ 7 *10^9
+time_P1 = 1.125 s
+
+time_P2 = (*0^9 * 0.75) / 3 * 10^9
+time_P2 = 0.25 s
+```
+
+This is false, **P2** has a better performance.
+
+#### 1.12.2
+
+```
+clkCycles = CPI * numInstructions
+
+clkCycles_P1 = 0.9 * 1 * 10^9
+clkCycles_P1 = 0.9 * 10^9
+
+numInst_P2 = (0.9 * 10^9) / 0.75
+numInst_P2 = (0.9 * 10^9) / 0.75
+numInst_P2 = 1.2 * 10^9
+
+```
+
+#### 1.12.3
+
+P1 clock rate = 4GHz -> 4 * 10^9 clocks cycles per second
+P2 clock rate = 3GHz -> 3 * 10^9 clocks cycles per second
+
+```
+4*10^9 = 0.9 * numInst_P1
+num_InstP1 = 4.4 * 10^9
+num_InstP1 = 4400 MIPS
+
+3*10^9 = 0.75 * numInst_P1
+num_InstP2 = 4 * 10^9
+num_InstP2 = 4000 MIPS
+```
+
+False, as well. As we had saw in the exercise **1.12.2**, P2 has better performance, although P1 has a larger MIPS. 
+
+#### 1.12.4
+
+```
+num_InstP1 = 4.4 * 10^9
+MFLOPS_P1 = (0.4 * 4.4*10^9) / (1 * 10^6)
+MFLOPS_P1 = 1760
+
+num_InstP2 = 4 * 10^9
+MFLOPS_P2 = (0.4 * 4*10^9) / (1*10^6)
+MFLOPS_P2 = 1600
+```
