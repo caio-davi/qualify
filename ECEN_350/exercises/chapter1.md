@@ -2,7 +2,7 @@
 
 #### 1.1
 
-There are many. Laptops, wrist bands, embebed car systems, video-games....
+There are many. Laptops, wrist bands, embedded car systems, video-games...
 
 #### 1.2
 
@@ -119,7 +119,7 @@ Clk_A = 1.36 * Clk_B
 excTime_C = 6 * 10^8 * 1.1 * 1 * 10^(-9)
 excTime_C = 0.66 
 ```
-The new compiler's program will run in 0.66 secods, 1.67 faster than compiler A and 2.27 faster than compiler B.
+The new compiler's program will run in 0.66 seconds, 1.67 faster than compiler A and 2.27 faster than compiler B.
 
 
 #### 1.8
