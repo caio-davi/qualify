@@ -270,3 +270,37 @@ LOOP:   SUBIS   X1, X1, #1  // --X1 == 0 ?
         B LOOP
 DONE:
 ```
+
+#### 2.26
+```c
+for(i = 0; i < a; i++){
+        for(j = 0; j < b; j++){
+                D[4*j] = i + j;
+        }
+}
+```
+
+```
+        MOV     X10, XZR                // i = 0
+for1:   CMP     X10, X0                 // i > a? 
+        B.GE    exit1                   // if yes, exit.
+        MOV     X11, XZR                // j = 0
+for2:   CMP     X11, X1                 // j > b?
+        B.GE    exit2                   // if yes, exit.
+        ADD     X3, X10, X11            // X3 = i + j
+        LSL     X4, X11, #5             // X4 = (j * 4) * 8 (to get the address)
+        ADD     X5, X2, X4              // X5 = &D[4*j]
+        STUR    X3, [X5, #0]            // D[4j] = i + j
+        ADDI    X11, X11, #1            // j++
+        B       for2                    // loop 2
+        ADDI    X10, X10, #1            // i++
+        B       for1
+```
+
+#### 2.27
+
+```
+numInst = 1 + i * (( j * 8 ) + 2)
+numInst = 1 + 10 * (( 1 * 8 ) + 2)
+numInst = 101
+```
