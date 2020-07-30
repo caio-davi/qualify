@@ -42,7 +42,7 @@ Patterson, David A., and John L. Hennessy. Computer Organization and Design ARM 
 
 5. Datapath and Control
 
-- [ ] Single-cycle implementation
+- [x] Single-cycle implementation
 
 6. Pipelining
 
