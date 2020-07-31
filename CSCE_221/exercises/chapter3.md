@@ -14,7 +14,7 @@ Running time: 0.049
 Running time: 0.062
 ```
 
-If it uses a vector implementations it will be O(n), if it is a linked list, O(n^2).
+If it uses a vector implementation it will be O(n), if it is a linked list, O(n^2).
 
 #### 3.2
 a) The parameter is the element before the ones to be swapped. 
