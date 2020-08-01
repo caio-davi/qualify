@@ -48,7 +48,7 @@
 
 3. Complexity Analysis
 
-- [ ] Asymptotic notations: the “big‐Oh” notation
-- [ ] Asymptotic analysis using the big‐Oh notation
+- [x] Asymptotic notations: the “big‐Oh” notation
+- [x] Asymptotic analysis using the big‐Oh notation
 
 [back](../FollowUp.md)

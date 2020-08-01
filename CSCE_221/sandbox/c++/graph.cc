@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 #include <iostream>
 #include <string>
-#include<tuple>
+#include <tuple>
 #include <algorithm>
 
 using namespace std;

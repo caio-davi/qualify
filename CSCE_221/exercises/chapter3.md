@@ -41,6 +41,14 @@ void swap(Node* first){
     after->previous = first;
 }
 ```
+#### 3.4
+
+[Code](./35.cc)
+
+#### 3.5
+
+[Code](./35.cc)
+
 #### 3.11
 [Code](./311.cc)
 
