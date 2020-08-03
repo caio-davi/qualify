@@ -2,7 +2,31 @@
 
 
 
-#### 4.1 to 4.7
+#### 4.1 
+
+![](./images/41.png)
+
+#### 4.2
+
+![](./images/42.png)
+
+#### 4.3
+
+![](./images/43.png)
+
+#### 4.4
+
+![](./images/44.png)
+
+#### 4.5
+
+Very similar to the previus one, but with 8 bits instead of 4. 
+
+#### 4.6
+
+
+
+to 4.7
 *Component Design*
 
 #### 4.8
