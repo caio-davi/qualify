@@ -20,10 +20,11 @@
 
 #### 4.5
 
-Very similar to the previus one, but with 8 bits instead of 4. 
+Very similar to the previous one, but with 8 bits instead of 4. 
 
 #### 4.6
 
+![](./images/46.png)
 
 
 to 4.7

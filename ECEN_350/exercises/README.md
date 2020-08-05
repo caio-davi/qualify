@@ -11,5 +11,6 @@ Patterson, David A., and John L. Hennessy.
 - [Chapter 1](./chapter1.md)
 - [Chapter 2](./chapter2.md)
 - [Chapter 4](./chapter4.md)
+- [Chapter 5](./chapter5.md)
 
 [Back to CSCE 350](../README.md)
