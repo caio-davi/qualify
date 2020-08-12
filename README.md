@@ -2,7 +2,7 @@
 
 > ## NEW Date: August, 13
 
-## Courses:
+## Courses:git
 
 [CSCE 221 – Data Structures and Algorithms](./CSCE_221/README.md)
 

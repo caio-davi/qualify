@@ -45,4 +45,4 @@ Frank Vahid. Computer Digital Design with RTL Design, VHDL, and Verilog.
 - [x] Circuit design styles
 - [x] Design of gates and memory elements
 
-[back](../FollowUp.md)
+[back](../README.md)

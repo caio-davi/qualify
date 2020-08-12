@@ -4,7 +4,7 @@
 
 Patterson, David A., and John L. Hennessy. Computer Organization and Design ARM Edition: The Hardware Software Interface. Morgan kaufmann, 2016.
 
-[Exercises](./exercises.md)
+[Exercises](./exercises)
 
 
 ## Contents:
@@ -49,10 +49,10 @@ Patterson, David A., and John L. Hennessy. Computer Organization and Design ARM 
 - [x] Pipelined datapath
 - [x] Pipelined control
 - [x] Pipeline hazards
-  - [ ] Structural
-  - [ ] Control
-  - [ ] Data hazards
-  - [ ] Hazard detection and resolution
+  - [x] Structural
+  - [x] Control
+  - [x] Data hazards
+  - [x] Hazard detection and resolution
 
 7. Memory Hierarchy
 
