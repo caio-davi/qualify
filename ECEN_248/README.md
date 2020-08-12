@@ -41,8 +41,8 @@ Frank Vahid. Computer Digital Design with RTL Design, VHDL, and Verilog.
 
 5. MOS based Logic Circuits
 
-- [ ] Basic MOS based realization of logic elements
-- [ ] Circuit design styles
-- [ ] Design of gates and memory elements
+- [x] Basic MOS based realization of logic elements
+- [x] Circuit design styles
+- [x] Design of gates and memory elements
 
 [back](../FollowUp.md)

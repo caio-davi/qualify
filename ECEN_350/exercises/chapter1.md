@@ -43,7 +43,7 @@ P2 = 2.5 / 1 = 2.5
 
 P3 = 4/ 2.2 = 1.82
 
-Thereforem P2 has the highest performance expressed in instructions per second.
+Therefore, P2 has the highest performance expressed in instructions per second.
 
 **b.**
 

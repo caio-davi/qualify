@@ -28,9 +28,9 @@
 
 2. Algorithms
 
-- [ ] Sorting
+- [x] Sorting
   - [x] Merge‐sort
-  - [ ] Quick‐sort
+  - [x] Quick‐sort
 - [ ] The Huffman coding algorithm
 - [ ] Solving the longest common subsequence problem using dynamic programming
 - [x] Basic algorithms on trees
@@ -39,8 +39,8 @@
   - [X] Post‐order traversal
 - [ ] Graph traversal
   - [x] Depth‐first search
-  - [ ] Breadth‐first search
-- [ ] Topological order and sorting of directed acyclic graphs
+  - [x] Breadth‐first search
+- [x] Topological order and sorting of directed acyclic graphs
 - [x] Shortest paths: Dijkstra’s algorithm
 - [ ] Minimum spanning trees
   - [ ] Kruskal’s algorithm

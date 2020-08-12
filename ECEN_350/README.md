@@ -46,9 +46,9 @@ Patterson, David A., and John L. Hennessy. Computer Organization and Design ARM 
 
 6. Pipelining
 
-- [ ] Pipelined datapath
-- [ ] Pipelined control
-- [ ] Pipeline hazards
+- [x] Pipelined datapath
+- [x] Pipelined control
+- [x] Pipeline hazards
   - [ ] Structural
   - [ ] Control
   - [ ] Data hazards
@@ -56,8 +56,8 @@ Patterson, David A., and John L. Hennessy. Computer Organization and Design ARM 
 
 7. Memory Hierarchy
 
-- [ ] Overview of SRAM and DRAM design
-- [ ] Basic of caches
+- [x] Overview of SRAM and DRAM design
+- [x] Basic of caches
 - [ ] Framework for memory hierarchy
 - [ ] Measuring memory performance
 
